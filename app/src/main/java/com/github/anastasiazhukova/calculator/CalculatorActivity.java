@@ -208,7 +208,9 @@ public class CalculatorActivity extends AppCompatActivity {
 
                 if (currentValue == value2 && currentOperation != null) {
                     if (!currentValue.isZeroValue()) {
-                        value1 = mCalculator.evaluate(value1, currentOperation, value2);
+                        //This set for the situation, when operations go one after another
+                        Operations previousOperation = currentOperation;
+                        value1 = mCalculator.evaluate(value1, previousOperation, value2);
                         showValue(value1);
                     } else {
                         setErrorMode();
@@ -229,7 +231,9 @@ public class CalculatorActivity extends AppCompatActivity {
             @Override
             public void onClick(final View v) {
                 if (currentValue == value2 && !value2.isZeroValue() && currentOperation != null) {
-                    value1 = mCalculator.evaluate(value1, currentOperation, value2);
+                    //This set for the situation, when operations go one after another
+                    Operations previousOperation = currentOperation;
+                    value1 = mCalculator.evaluate(value1, previousOperation, value2);
                     showValue(value1);
                 }
                 resetForNextOperation();
@@ -245,7 +249,9 @@ public class CalculatorActivity extends AppCompatActivity {
             @Override
             public void onClick(final View v) {
                 if (currentValue == value2 && !value2.isZeroValue() && currentOperation != null) {
-                    value1 = mCalculator.evaluate(value1, currentOperation, value2);
+                    //This set for the situation, when operations go one after another
+                    Operations previousOperation = currentOperation;
+                    value1 = mCalculator.evaluate(value1, previousOperation, value2);
                     showValue(value1);
                 }
                 resetForNextOperation();
@@ -261,7 +267,9 @@ public class CalculatorActivity extends AppCompatActivity {
             @Override
             public void onClick(final View v) {
                 if (currentValue == value2 && !value2.isZeroValue() && currentOperation != null) {
-                    value1 = mCalculator.evaluate(value1, currentOperation, value2);
+                    //This set for the situation, when operations go one after another
+                    Operations previousOperation = currentOperation;
+                    value1 = mCalculator.evaluate(value1, previousOperation, value2);
                     showValue(value1);
                 }
                 resetForNextOperation();
